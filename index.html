@@ -52,44 +52,24 @@
 
 	<p class="content-padded">
 
-		<h3>Digby App Install Page</h3>
-
-		<p class="center">Looking for older versions? Visit the <a href="#" onclick="window.location='archive.html'; return false;">archive page</a>.</p>
+		<h3>OCLC Mobile App Install Page</h3>
 
 		<div class="card">
 			
-			<h5>Install Packages</h5>
-			
-			<h4>Development Versions</h4>
-			<div id="dev-apps" class="center"></div>
-			
-			<h4>Production Versions</h4>
-			<div id="prod-apps" class="center"></div>
-		</div>
-		
-		<div class="card">
-			<h5>Release Notes</h5>
 			<p class="center">
-				<a href="http://bit.ly/release-notes-digby">Release notes can be found here</a>
-			</p>
-		</div>
-
-		<div class="card">
-			<h5>Install certificate (iOS ONLY)</h5>
-			<p>
-				If you are testing in DEV you must first install this certificate.
-				This is not required in PROD.
-			</p>
-			<p class="center">
-				<a class="btn btn-primary btn-outlined" href="https://dl.dropboxusercontent.com/s/9dosh4l57nwh0on/oa-OACA01EWDU-CA.cer">
-					<span class="icon icon-download"></span>&nbsp;CERTIFICATE
+				<a class="btn btn-primary btn-outlined" href="#" onclick="window.location='digby.html'; return false;">
+					Digby
 				</a>
 			</p>
-			<p>
-				For <b>iOS</b> just follow the prompts. You also need to ENABLE FULL TRUST FOR ROOT CERTIFICATES under About -> Certificate Trust Settings.
- 			</p>
-		</div>
 
+			<p class="center">
+				<a class="btn btn-primary btn-outlined" href="#" onclick="window.location='fiction500.html'; return false;">
+					Fiction500
+				</a>
+			</p>
+
+		</div>
+		
 	</div>
 
 </div>
@@ -97,41 +77,3 @@
 </body>
 
 </html>
-
-<script>
-var data = {
-    "dev": [
-		{
-            "title": "Digby for iPhone v1.9.0",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/i77jal7nnaju4tg/manifest.plist"
-        },
-		{
-            "title": "Digby for iPhone v1.8.4",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/1aeew0hf9tv5z93/manifest.plist"
-        },
-        {
-            "title": "Digby for Android v1.8.4",
-            "url": "https://dl.dropboxusercontent.com/s/hvnwe2uw1alyjsj/Digby.apk"
-        }
-    ],
-    "prod": [
-		{
-            "title": "Digby for iPhone v1.8.4",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/dpzk65qhlicw8t4/manifest.plist"
-        },
-        {
-            "title": "Digby for Android v1.8.4",
-            "url": "https://dl.dropboxusercontent.com/s/4lmx4khjkh4qbvu/Digby.apk"
-        }
-    ]
-};
-
-$.each(data.dev, function(i, app) {
-    $("#dev-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-});
-$.each(data.prod, function(i, app) {
-    $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-});
-</script>
