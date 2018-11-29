@@ -66,11 +66,7 @@
 			
 			<h5>Install Packages</h5>
 			
-			<h4>Development Versions</h4>
-			<div id="dev-apps" class="center"></div>
-			
-			<h4>Production Versions</h4>
-			<div id="prod-apps" class="center"></div>
+			<div id="apps" class="center"></div>
 		</div>
 		
 		<div class="card">
@@ -90,22 +86,16 @@
 
 <script>
 var data = {
-    "dev": [
+    "apps": [
 		{
             "title": "Fiction500 for iPhone v0.1.2",
             "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/5qzt2plfmsem91e/manifest.plist"
         }
-    ],
-    "prod": [
     ]
 };
 
-$.each(data.dev, function(i, app) {
-    $("#dev-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-});
-$.each(data.prod, function(i, app) {
-    $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
+$.each(data.apps, function(i, app) {
+    $("#apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
         + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 </script>
