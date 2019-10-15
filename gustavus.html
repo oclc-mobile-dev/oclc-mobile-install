@@ -1,0 +1,85 @@
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet">
+	<style>
+		.content {
+			background-color: #ccc;
+		}
+		.hilight {
+			color: blue;
+		}
+		.card {
+			padding: 1em;
+		}
+		h3, h4, h5 {
+			text-align: center;
+		}
+		h4 {
+			margin-top: 1em;
+			padding-bottom: 5px;
+			text-decoration: underline;
+		}
+		h5 {
+			font-size: 16px;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			margin-top: 0px;
+			background-color: lightsteelblue;
+		}
+		.btn {
+			width: 90%;
+			margin-bottom: 0.75em;
+			font-size: 18px;
+			padding-top: 1em;
+			padding-bottom: 1em;
+		}
+		.center {
+			text-align: center;
+		}
+		.icon-download {
+			float: left;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/js/ratchet.min.js"></script>
+</head>
+
+<body>
+
+<div class="content">
+
+	<p class="content-padded">
+
+		<div class="card">
+			<h3>Digby App Install Page</h3>
+		</div>	
+
+		<div class="card">
+			<div id="prod-apps" class="center"></div>
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+
+</html>
+
+<script>
+var data = {
+    "prod": [
+		{    
+			"title": "Digby for iPhone",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/vd9222ltbm9lh00/manifest.plist"
+		}
+    ]
+};
+
+$.each(data.prod, function(i, app) {
+    $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
+        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+});
+</script>
