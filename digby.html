@@ -56,6 +56,11 @@
 		<!-- <p class="center">Looking for older versions? Visit the <a href="#" onclick="window.location='archive.html'; return false;">archive page</a>.</p> -->
 
 		<div class="card">
+			<h5>Digby Release Install Packages</h5>
+			<div id="release-apps" class="center"></div>
+		</div>
+
+		<div class="card">
 			<h5>Development Install Packages</h5>
 			<div id="dev-apps" class="center"></div>
 		</div>
@@ -157,7 +162,17 @@ var data = {
             "title": "Android 2.0.0",
             "url": "https://dl.dropboxusercontent.com/s/t70qfl83yb67k94/Digby.apk"
 		}
-    ]
+    ],
+    "release": [
+		{    
+			"title": "iOS 3.0.0",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/8r1aktbgvabxxy4/manifest.plist"
+		},
+        {
+			"title": "Android 3.0.0",
+            "url": "https://dl.dropboxusercontent.com/s/yyn36z8iwh6hs4r/Digby.apk"
+		}
+	]	
 };
 
 $.each(data.dev, function(i, app) {
@@ -166,6 +181,10 @@ $.each(data.dev, function(i, app) {
 });
 $.each(data.prod, function(i, app) {
     $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
+        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+});
+$.each(data.release, function(i, app) {
+    $("#release-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
         + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 </script>
