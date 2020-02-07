@@ -56,6 +56,11 @@
 		<!-- <p class="center">Looking for older versions? Visit the <a href="#" onclick="window.location='archive.html'; return false;">archive page</a>.</p> -->
 
 		<div class="card">
+			<h5>Digby Test Install Packages</h5>
+			<div id="test-apps" class="center"></div>
+		</div>
+
+		<div class="card">
 			<h5>Digby Release Install Packages</h5>
 			<div id="release-apps" class="center"></div>
 		</div>
@@ -112,22 +117,6 @@ var data = {
             "title": "Android 2.2.0",
             "url": "https://dl.dropboxusercontent.com/s/t4e5zg4lbc501pd/Digby.apk"
         },
-		{    
-			"title": "iOS 2.1.1",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/x49wqqb1zfxtshv/manifest.plist"
-		},
-        {
-            "title": "Android 2.1.1",
-            "url": "https://dl.dropboxusercontent.com/s/7g5zpwhsasbdue1/Digby.apk"
-        },
-		{    
-			"title": "iOS 2.0.0",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/elrnm3g4bbc9cbm/manifest.plist"
-		},
-        {
-            "title": "Android 2.0.0",
-            "url": "https://dl.dropboxusercontent.com/s/8iugq0rk8sysdcu/Digby.apk"
-        },
 		{
             "title": "iOS NIT",
             "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/amfew5brdyc5vgs/manifest.plist"
@@ -139,39 +128,25 @@ var data = {
     ],
     "prod": [
 		{    
-			"title": "iOS 2.2.0",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/zrqc0cnskm8lr1r/manifest.plist"
-		},
-        {
-            "title": "Android 2.2.0",
-            "url": "https://dl.dropboxusercontent.com/s/25mk91f2b4vzkju/Digby.apk"
-        },
-		{    
 			"title": "iOS 2.1.1",
             "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/0pgmtj45rvlc3z8/manifest.plist"
 		},
         {
             "title": "Android 2.1.1",
             "url": "https://dl.dropboxusercontent.com/s/igag9hokighfjhc/Digby.apk"
-        },
-		{
-            "title": "iOS 2.0.0",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/7mj3krom8hoexfb/manifest.plist"
-        },
-        {
-            "title": "Android 2.0.0",
-            "url": "https://dl.dropboxusercontent.com/s/t70qfl83yb67k94/Digby.apk"
-		}
+        }
     ],
-    "release": [
+    "test": [
 		{    
 			"title": "iOS 3.0.0",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/8r1aktbgvabxxy4/manifest.plist"
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/lciim5qy0w8zspn/manifest.plist"
 		},
         {
 			"title": "Android 3.0.0",
-            "url": "https://dl.dropboxusercontent.com/s/yyn36z8iwh6hs4r/Digby.apk"
+            "url": "https://dl.dropboxusercontent.com/s/j0d8gs56lslw6z9/Digby.apk"
 		}
+	],
+    "release": [
 	]	
 };
 
@@ -181,6 +156,10 @@ $.each(data.dev, function(i, app) {
 });
 $.each(data.prod, function(i, app) {
     $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
+        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+});
+$.each(data.test, function(i, app) {
+    $("#test-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
         + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.release, function(i, app) {
