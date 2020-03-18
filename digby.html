@@ -53,8 +53,6 @@
 			<h3>Digby App Install Page</h3>
 		</div>	
 
-		<!-- <p class="center">Looking for older versions? Visit the <a href="#" onclick="window.location='archive.html'; return false;">archive page</a>.</p> -->
-
 		<div class="card">
 			<h5>Test Install Packages</h5>
 			<div id="test-apps" class="center"></div>
@@ -66,12 +64,12 @@
 		</div>
 
 		<div class="card">
-			<h5>Development Install Packages</h5>
+			<h5>Development Install Packages (deprecated)</h5>
 			<div id="dev-apps" class="center"></div>
 		</div>
 
 		<div class="card">
-			<h5>Production Install Packages</h5>
+			<h5>Production Install Packages (deprecated)</h5>
 			<div id="prod-apps" class="center"></div>
 		</div>
 
@@ -163,6 +161,14 @@ var data = {
 		}
 	],
     "release": [
+	{    
+			"title": "iOS 3.0.0",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/8o6p87jgpgypzic/manifest.plist"
+		},
+        {
+			"title": "Android 3.0.0",
+            "url": "https://dl.dropboxusercontent.com/s/jtx54d2sfr3fz8q/Digby.apk"
+		}
 	]	
 };
 
