@@ -26,10 +26,9 @@
 			display: block;
 		}
 		.btn {
-			display: block;
 			margin-bottom: 0.75em;
 			font-size: 16px;
-			width: 50%;
+			width: 40%;
 			margin-left: 10px;
 			margin-right: 10px;
 			padding-top: 10px;
@@ -59,7 +58,7 @@
 
 		<div class="card">
 			<h5>Test Install Packages</h5>
-			<div id="test-apps" class="center"></div>
+			<div id="test-apps"></div>
 		</div>
 
 		<div class="card">
@@ -185,8 +184,7 @@ $.each(data.prod, function(i, app) {
         + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.test, function(i, app) {
-    $("#test-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+    $("#test-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.release, function(i, app) {
     $("#release-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
