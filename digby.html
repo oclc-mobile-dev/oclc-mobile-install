@@ -24,6 +24,7 @@
 		}
 		a {
 			display: block;
+			line-height: 32px;
 		}
 		.btn {
 			margin-bottom: 0.75em;
@@ -68,12 +69,12 @@
 
 		<div class="card">
 			<h5>Development Install Packages (deprecated)</h5>
-			<div id="dev-apps" class="center"></div>
+			<div id="dev-apps"></div>
 		</div>
 
 		<div class="card">
 			<h5>Production Install Packages (deprecated)</h5>
-			<div id="prod-apps" class="center"></div>
+			<div id="prod-apps"></div>
 		</div>
 
 		<div class="card">
@@ -176,12 +177,10 @@ var data = {
 };
 
 $.each(data.dev, function(i, app) {
-    $("#dev-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+    $("#dev-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.prod, function(i, app) {
-    $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
-        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+    $("#prod-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.test, function(i, app) {
     $("#test-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
