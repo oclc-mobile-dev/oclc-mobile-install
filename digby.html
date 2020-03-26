@@ -63,7 +63,7 @@
 
 		<div class="card">
 			<h5>Release Install Packages</h5>
-			<div id="release-apps" class="center"></div>
+			<div id="release-apps"></div>
 		</div>
 
 		<div class="card">
@@ -180,14 +180,14 @@ $.each(data.dev, function(i, app) {
         + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.prod, function(i, app) {
-    $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url + '">' + app.title + '</a>');
+    $("#prod-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
+        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.test, function(i, app) {
     $("#test-apps").append('<a class="btn btn-primary btn-outlined" href="' + app.url 
         + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.release, function(i, app) {
-    $("#release-apps").append('<a href="' + app.url 
-        + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+    $("#release-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
 });
 </script>
