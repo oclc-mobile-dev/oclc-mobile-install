@@ -25,7 +25,6 @@
 	</style>
 
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/js/ratchet.min.js"></script>
 </head>
 
 <body>
@@ -36,9 +35,9 @@
 
 		<div class="card">
 			<h5 style="text-align: center;">Digby Beta Install</h5>
-			<h6>
+			<span>
 				Hi Everyone!  Thanks for participating in this General Beta of Digby.  We are excited to show you a completely rewritten app from the ground up.  Enjoy!
-			</h6>
+			</span>
 		</div>	
 
 		<div class="card">
@@ -67,7 +66,7 @@ var data = {
 	]	
 };
 
-$.each(data.prod, function(i, app) {
+$.each(data.release, function(i, app) {
     $("#release-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
 });
 </script>
