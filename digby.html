@@ -138,6 +138,14 @@ var data = {
             "url": "https://dl.dropboxusercontent.com/s/w1rr1o9cy9rudgi/Digby.apk"
 		},
 		{    
+			"title": "3.0.1 - iOS",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/qp6ubshilvb1qu9/manifest.plist"
+		},
+        {
+			"title": "3.0.1 - Android",
+            "url": "https://dl.dropboxusercontent.com/s/d58991a35vxlhai/Digby.apk"
+		},
+		{    
 			"title": "3.0.0 - iOS",
             "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/hc7ki9zyivyjzfw/manifest.plist"
 		},
@@ -148,18 +156,18 @@ var data = {
 	],
     "release": [
 		{    
-			"title": "3.0.0 - Digby Beta Install",
+			"title": "Digby Beta Install (3.0.1)",
             "url": "/oclc-mobile-install/digby-test.html"
 		}
 	]	
 };
 
-$.each(data.dev, function(i, app) {
-    $("#dev-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-});
-$.each(data.prod, function(i, app) {
-    $("#prod-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-});
+// $.each(data.dev, function(i, app) {
+//     $("#dev-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+// });
+// $.each(data.prod, function(i, app) {
+//     $("#prod-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+// });
 $.each(data.test, function(i, app) {
     $("#test-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
