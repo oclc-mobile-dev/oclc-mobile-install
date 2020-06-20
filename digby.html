@@ -162,12 +162,12 @@ var data = {
 	]	
 };
 
-// $.each(data.dev, function(i, app) {
-//     $("#dev-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-// });
-// $.each(data.prod, function(i, app) {
-//     $("#prod-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-// });
+$.each(data.dev, function(i, app) {
+    $("#dev-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+});
+$.each(data.prod, function(i, app) {
+    $("#prod-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+});
 $.each(data.test, function(i, app) {
     $("#test-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
