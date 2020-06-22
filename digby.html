@@ -92,24 +92,6 @@
 
 <script>
 var data = {
-    "dev": [
-		{    
-			"title": "2.1.1 - iOS",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/bvf3p8u523qwf3l/manifest.plist"
-		},
-        {
-			"title": "2.1.1 - Android",
-            "url": "https://dl.dropboxusercontent.com/s/lf3gpbwl5xg6rhf/Digby.apk"
-        },
-		{    
-			"title": "1.9.1 - iOS",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/4knw5xj28ad8u0n/manifest.plist"
-		},
-        {
-			"title": "1.9.1 - Android",
-            "url": "https://dl.dropboxusercontent.com/s/drplhmeofcc63ay/Digby.apk"
-        }
-    ],
     "prod": [
 		{    
 			"title": "2.1.1 - iOS",
@@ -138,6 +120,14 @@ var data = {
             "url": "https://dl.dropboxusercontent.com/s/w1rr1o9cy9rudgi/Digby.apk"
 		},
 		{    
+			"title": "3.0.2 - iOS",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/hff1h951377bo8i/manifest.plist"
+		},
+        {
+			"title": "3.0.2 - Android",
+            "url": "https://dl.dropboxusercontent.com/s/obey3vq1rlecq8u/Digby.apk"
+		},
+		{    
 			"title": "3.0.1 - iOS",
             "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/qp6ubshilvb1qu9/manifest.plist"
 		},
@@ -162,9 +152,6 @@ var data = {
 	]	
 };
 
-$.each(data.dev, function(i, app) {
-    $("#dev-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-});
 $.each(data.prod, function(i, app) {
     $("#prod-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
