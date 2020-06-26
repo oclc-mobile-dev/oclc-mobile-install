@@ -52,13 +52,8 @@
 		</div>
 
 		<div class="card">
-			<h5>Development (deprecated)</h5>
-			<div id="dev-apps"></div>
-		</div>
-		
-		<div class="card">
-			<h5>Production (deprecated)</h5>
-			<div id="prod-apps"></div>
+			<h5>Old</h5>
+			<div id="old-apps"></div>
 		</div>
 
 		<div class="card">
@@ -92,24 +87,22 @@
 
 <script>
 var data = {
-	"dev": [
+	"old": [
 		{    
-			"title": "2.1.1 - iOS",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/bvf3p8u523qwf3l/manifest.plist"
-		},
-        {
-			"title": "2.1.1 - Android",
-            "url": "https://dl.dropboxusercontent.com/s/lf3gpbwl5xg6rhf/Digby.apk"
-        }
-    ],
-	"prod": [
-		{    
-			"title": "2.1.1 - iOS",
+			"title": "2.1.1 PROD - iOS",
             "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/iorgn3su5t4xj68/manifest.plist"
 		},
         {
-			"title": "2.1.1 - Android",
+			"title": "2.1.1 PROD - Android",
             "url": "https://dl.dropboxusercontent.com/s/cd1m8bah67jq8gf/Digby.apk"
+        },
+		{    
+			"title": "2.1.1 DEV - iOS",
+            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/bvf3p8u523qwf3l/manifest.plist"
+		},
+        {
+			"title": "2.1.1 DEV - Android",
+            "url": "https://dl.dropboxusercontent.com/s/lf3gpbwl5xg6rhf/Digby.apk"
         }
     ],
     "test": [
@@ -138,11 +131,8 @@ var data = {
 	]	
 };
 
-$.each(data.dev, function(i, app) {
-    $("#dev-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
-});
-$.each(data.prod, function(i, app) {
-    $("#prod-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+$.each(data.old, function(i, app) {
+    $("#old-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
 });
 $.each(data.test, function(i, app) {
     $("#test-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
