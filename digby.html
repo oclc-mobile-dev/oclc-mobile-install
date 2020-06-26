@@ -132,10 +132,10 @@ var data = {
 };
 
 $.each(data.old, function(i, app) {
-    $("#old-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+    $("#old-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
 });
 $.each(data.test, function(i, app) {
-    $("#test-apps").append('<a href="' + app.url + '"><span class="icon icon-download"></span>&nbsp;' + app.title + '</a>');
+    $("#test-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
 });
 $.each(data.release, function(i, app) {
     $("#release-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
