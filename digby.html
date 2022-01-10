@@ -97,24 +97,6 @@
 
 <script>
 var data = {
-	"old": [
-		{    
-			"title": "<i class='fab fa-apple'></i>2.1.1 PROD",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/iorgn3su5t4xj68/manifest.plist"
-		},
-        {
-			"title": "<i class='fab fa-android'></i>2.1.1 PROD",
-            "url": "https://dl.dropboxusercontent.com/s/cd1m8bah67jq8gf/Digby.apk"
-        },
-		{    
-			"title": "<i class='fab fa-apple'></i>2.1.1 DEV",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/bvf3p8u523qwf3l/manifest.plist"
-		},
-        {
-			"title": "<i class='fab fa-android'></i>2.1.1 DEV",
-            "url": "https://dl.dropboxusercontent.com/s/lf3gpbwl5xg6rhf/Digby.apk"
-        }
-    ],
     "test": [
 		{    
 			"title": "<i class='fab fa-apple'></i>3.2.0",
@@ -131,30 +113,6 @@ var data = {
         {
 			"title": "<i class='fab fa-android'></i>3.1.2",
             "url": "https://dl.dropboxusercontent.com/s/21nbywywgp1i77h/Digby.apk"
-		},
-		{    
-			"title": "<i class='fab fa-apple'></i>3.1.1",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/hel4rtx5pneugsk/manifest.plist"
-		},
-        {
-			"title": "<i class='fab fa-android'></i>3.1.1",
-            "url": "https://dl.dropboxusercontent.com/s/2xtr1lhzymxou6e/Digby.apk"
-		},
-		{    
-			"title": "<i class='fab fa-apple'></i>3.1.0",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/00jdwhaon7qwnwo/manifest.plist"
-		},
-        {
-			"title": "<i class='fab fa-android'></i>3.1.0",
-            "url": "https://dl.dropboxusercontent.com/s/w1rr1o9cy9rudgi/Digby.apk"
-		},
-		{    
-			"title": "<i class='fab fa-apple'></i>3.0.3",
-            "url": "itms-services://?action=download-manifest&url=https://dl.dropboxusercontent.com/s/1cwlit5p7cbwyht/manifest.plist"
-		},
-        {
-			"title": "<i class='fab fa-android'></i>3.0.3",
-            "url": "https://dl.dropboxusercontent.com/s/edukz2qazf00iwc/Digby.apk"
 		}
 	],
     "release": [
@@ -165,9 +123,6 @@ var data = {
 	]	
 };
 
-$.each(data.old, function(i, app) {
-    $("#old-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
-});
 $.each(data.test, function(i, app) {
     $("#test-apps").append('<a href="' + app.url + '">' + app.title + '</a>');
 });
