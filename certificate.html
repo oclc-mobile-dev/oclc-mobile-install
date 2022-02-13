@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
+
+	<style>
+		.content {
+			background-color: #ccc;
+		}
+		.hilight {
+			color: blue;
+		}
+		.card {
+			padding: 1em;
+		}
+		h5 {
+			font-size: 16px;
+			padding: 10px;
+			margin-top: 0px;
+			background-color: lightsteelblue;
+		}
+		a {
+			display: block;
+			line-height: 48px;
+		}
+		.icon-download {
+			float: left;
+			line-height: 48px;
+		}
+		i {
+			width: 32px;
+		}
+	</style>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+
+<div class="content">
+
+	<p class="content-padded">
+
+		<div class="card">
+			<h3 style="text-align: center">OCLC Root CA Install Page</h3>
+		</div>	
+
+		<div class="card">
+			<p>
+				In order to run in non-prod environments (NAT), you must have the “OCLC Root CA” certificate installed.
+				Otherwise the device won’t be able to use API in that environment and any browser pages open will show
+				a warning about the site not being trusted.  This is a one time setup for each device you’ll be using.
+				Make sure you follow these directions on your mobile device.
+			</p>
+			<p>
+				<h5>iOS install certificate</h5>
+
+					- <a href="https://dl.dropboxusercontent.com/s/ubtjgnm11fmgd2w/oclc.cer">Download the OCLC Root CA certificate</a>.
+					- Answer “allow”.
+					- It should say “Profile Downloaded”.
+					- Open settings.  Notice there is a “Profile Downloaded” item at the top.  Select it.
+					- Select “Install” on the next screen.
+					- Select “Install” again.
+					- Go to settings “About”.
+					- Scroll to the bottom where it says “Certificate Trust Settings” and select it.
+					- Toggle the “OCLC Root CA” to ON and select “Continue”.
+			</p>
+			<p>
+				<h5>Android install certificate</h5>
+
+					- <a href="https://dl.dropboxusercontent.com/s/ubtjgnm11fmgd2w/oclc.cer">Download the OCLC Root CA certificate</a>.
+					- Notice where you store it.
+					- Open settings and search for “certificate” and select “CA certificate”.
+					- Select “CA certificate” again.
+					- Select “Install anyway”.
+					- Find the “oclc.cer” file you just downloaded and select it.
+					- You should see “CA certificate installed” at the bottom of the screen.
+			</p>
+			<!--
+			<p>
+				<a href="https://dl.dropboxusercontent.com/s/9dosh4l57nwh0on/oa-OACA01EWDU-CA.cer">
+					<span class="icon icon-download"></span>&nbsp;OLD CERTIFICATE
+				</a>
+			</p>
+			-->
+		</div>
+
+	</div>
+
+</div>
+
+</body>
+
+</html>
